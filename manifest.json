@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "Comfort",
+  "version": "1.0",
+  "description": "The web filter extension will filter out images/videos and text keywords",
+  "icons": {
+    "16": "images/comfort_16.png",
+    "32": "images/comfort_32.png",
+    "48": "images/comfort_48.png",
+    "128": "images/comfort_128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": [
+        "content-scripts/content.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "storage",
+    "debugger"
+  ],
+  "author": "Corey James Lee"
+}
